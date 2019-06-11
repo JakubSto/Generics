@@ -1,16 +1,20 @@
 
 import java.util.ArrayList;
 
-public class Box {
+public class Box <T> {
 
-    static public ArrayList<?> box = new ArrayList();
+     public ArrayList<T> itemsInBox = new ArrayList();
 
-    static void clearBox(){
-        box.clear();
+     void clearBox(){
+        itemsInBox.clear();
     }
 
-    static void printItemsOfBox(){
-        for (Box item:box) {
+    void addItem(T item){
+         itemsInBox.add(item);
+    }
+
+     void printItemsOfBox(){
+        for (T item:itemsInBox) {
             System.out.println(item);
         }
     }
