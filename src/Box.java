@@ -9,5 +9,11 @@ public class Box {
         box.clear();
     }
 
+    static void printItemsOfBox(){
+        for (Box item:box) {
+            System.out.println(item);
+        }
+    }
+
 
 }
