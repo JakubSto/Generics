@@ -1,2 +1,2 @@
-public class Tool {
+public class Tool extends Item {
 }

@@ -1,2 +1,2 @@
-public class Toy {
+public class Toy extends Item {
 }
