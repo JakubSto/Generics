@@ -1,8 +1,8 @@
 public class Food {
 
-    Food tomatooSoup = new Food("soup", false);
-    Food macChicken = new Food("McDonald", true);
-    Food boxOfSpicyChickens = new Food("KFC", true);
+    public Food tomatooSoup = new Food("soup", false);
+    public Food macChicken = new Food("McDonald", true);
+    public Food boxOfSpicyChickens = new Food("KFC", true);
 
 
     public String typeOfFood;
