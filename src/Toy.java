@@ -1,10 +1,14 @@
 public class Toy extends Item {
-    Toy car1 = new Toy("bmw");
-    Toy car2 = new Toy("audi");
-    Toy car3 = new Toy("fiat");
+    Toy car1 = new Toy("bmw", true);
+    Toy car2 = new Toy("audi", false);
+    Toy car3 = new Toy("fiat", true);
 
-    public Toy(String itemName){
+    public boolean rcToy;
+
+    public Toy(String itemName, boolean rcToy) {
         super(itemName);
-
+        this.rcToy = rcToy;
     }
+
+
 }
