@@ -3,6 +3,13 @@ import java.util.ArrayList;
 public class Room {
     ArrayList<Shelf> shelvesInRoom = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "Room{" +
+                "shelvesInRoom=" + shelvesInRoom +
+                '}';
+    }
+
     public void addShelvesToRoom(Shelf shelf){
         shelvesInRoom.add(shelf);
     }

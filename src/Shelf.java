@@ -12,8 +12,9 @@ public class Shelf <T> {
     }
 
     void showBoxesOnShelf(){
-        for (Box box: boxesOnShelf) {
-            System.out.println(boxesOnShelf);
+        for (Box<T> box: boxesOnShelf) {
+            System.out.println(box);
         }
+        System.out.println();
     }
 }

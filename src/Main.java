@@ -32,10 +32,14 @@ public class Main {
         Box<Item> itemBox2 = new Box<>();
 
         //Shelves
-        Shelf<Box<Food>> shelfFood = new Shelf();
-        Shelf<Box<Toy>> shelfToy = new Shelf();
-        Shelf<Box<Tool>> shelfTool = new Shelf();
-        Shelf<Box<Item>> shelfItem = new Shelf();
+        Shelf<Food> shelfFood = new Shelf();
+        Shelf<Toy> shelfToy = new Shelf();
+        Shelf<Tool> shelfTool = new Shelf();
+        Shelf<Item> shelfItem = new Shelf();
+        Shelf<?> shelfAll = new Shelf<>();
+
+        //Room
+        Room room = new Room();
 
         //----------------------------------------------------------------------------//
 
@@ -49,16 +53,30 @@ public class Main {
         toolBox2.addItem(hammer); toolBox2.addItem(drill);
 
         itemBox.addItem(drill); itemBox.addItem(car1);
-        itemBox2.addItem(drill); itemBox2.addItem(car1);
+        itemBox2.addItem(drill); itemBox2.addItem(car2);
 
         foodBox.printItemsOfBox();
         toyBox.printItemsOfBox();
         toolBox.printItemsOfBox();
         itemBox.printItemsOfBox();
 
-        shelfFood.addBoxToShelf(foodBox);
+        shelfFood.addBoxToShelf(foodBox); shelfFood.addBoxToShelf(foodBox2);
+        shelfTool.addBoxToShelf(toolBox); shelfTool.addBoxToShelf(toolBox2);
+        shelfToy.addBoxToShelf(toyBox); shelfToy.addBoxToShelf(toyBox2);
+        shelfItem.addBoxToShelf(itemBox); shelfItem.addBoxToShelf(itemBox2);
+        shelfAll.addBoxToShelf(toolBox); // <-- toolBox error
 
+        shelfFood.showBoxesOnShelf();
+        shelfTool.showBoxesOnShelf();
+        shelfToy.showBoxesOnShelf();
+        shelfItem.showBoxesOnShelf();
 
+        room.addShelvesToRoom(shelfItem);
+        room.addShelvesToRoom(shelfTool);
+        room.addShelvesToRoom(shelfToy);
+        room.addShelvesToRoom(shelfFood);
+        room.addShelvesToRoom(shelfAll);
 
+        room.showShelvesInRoom();
     }
 }
