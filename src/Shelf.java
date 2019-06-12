@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public class Shelf {
-    public ArrayList<Box> boxesOnShelf = new ArrayList<>();
+public class Shelf <T> {
+    public ArrayList<Box <T>> boxesOnShelf = new ArrayList<>();
 
-    void addBoxToShelf(Box box) {
+    void addBoxToShelf(Box<T> box) {
         boxesOnShelf.add(box);
     }
 

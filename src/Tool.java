@@ -1,7 +1,4 @@
 public class Tool extends Item {
-    Tool hammer = new Tool("hammer", false);
-    Tool drill = new Tool("drill", true);
-    Tool keyboard = new Tool("keyboard", true);
 
     public boolean electricTool;
 
@@ -10,5 +7,11 @@ public class Tool extends Item {
         this.electricTool = electricTool;
     }
 
-
+    @Override
+    public String toString() {
+        return "Tool{" +
+                "electricTool=" + electricTool +
+                ", itemName='" + itemName + '\'' +
+                '}';
+    }
 }
