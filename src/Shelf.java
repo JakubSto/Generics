@@ -1,9 +1,16 @@
 import java.util.ArrayList;
 
-public class Shelf <T> {
-    public ArrayList<Box <T>> boxesOnShelf = new ArrayList<>();
+public class Shelf <T extends Box> {
+    public ArrayList<T> boxesOnShelf = new ArrayList<>();
 
-    void addBoxToShelf(Box<T> box) {
+    @Override
+    public String toString() {
+        return "Shelf{" +
+                "boxesOnShelf=" + boxesOnShelf +
+                '}';
+    }
+
+    void addBoxToShelf(T box) {
         boxesOnShelf.add(box);
     }
 

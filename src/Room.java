@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Room {
     ArrayList<Shelf> shelvesInRoom = new ArrayList<>();
+    String roomName;
 
     @Override
     public String toString() {

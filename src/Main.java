@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -32,11 +34,11 @@ public class Main {
         Box<Item> itemBox2 = new Box<>();
 
         //Shelves
-        Shelf<Food> shelfFood = new Shelf();
-        Shelf<Toy> shelfToy = new Shelf();
-        Shelf<Tool> shelfTool = new Shelf();
-        Shelf<Item> shelfItem = new Shelf();
-        Shelf<?> shelfAll = new Shelf<>();
+        Shelf<Box<Food>> shelfFood = new Shelf();
+        Shelf<Box<Toy>> shelfToy = new Shelf();
+        Shelf<Box<Tool>> shelfTool = new Shelf();
+        Shelf<Box<Item>> shelfItem = new Shelf();
+        Shelf<Box<?>> shelfAll = new Shelf<>();
 
         //Room
         Room room = new Room();
@@ -64,12 +66,13 @@ public class Main {
         shelfTool.addBoxToShelf(toolBox); shelfTool.addBoxToShelf(toolBox2);
         shelfToy.addBoxToShelf(toyBox); shelfToy.addBoxToShelf(toyBox2);
         shelfItem.addBoxToShelf(itemBox); shelfItem.addBoxToShelf(itemBox2);
-        shelfAll.addBoxToShelf(toolBox); // <-- toolBox error
+        shelfAll.addBoxToShelf(toolBox); shelfAll.addBoxToShelf(foodBox);
 
         shelfFood.showBoxesOnShelf();
         shelfTool.showBoxesOnShelf();
         shelfToy.showBoxesOnShelf();
         shelfItem.showBoxesOnShelf();
+        shelfAll.showBoxesOnShelf();
 
         room.addShelvesToRoom(shelfItem);
         room.addShelvesToRoom(shelfTool);
